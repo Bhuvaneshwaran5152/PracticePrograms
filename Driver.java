@@ -1,46 +1,20 @@
-package com.full.interfaceExample;
+package com.full.encapsulation;
 
-public class Driver implements Printable, Showable {
-
-	@Override
-	public void show() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void run(Integer number) {
-		// TODO Auto-generated method stub
-		System.out.println("This is my number " + number);
-	}
-
-	@Override
-	public void print() {
-		// TODO Auto-generated method stub
-		System.out.println(Driver.class.getName());
-
-	}
-
-	@Override
-	public void display() {
-		// TODO Auto-generated method stub
-		System.out.println("Displaying comntents");
-
-	}
-
-	@Override
-	public void run() {
-		System.out.println("I'm running");
-		run(10);
-	}
+public class Driver {
 
 	public static void main(String[] args) {
-		Driver drive = new Driver();
-		drive.run();
-		drive.print();
-		drive.display();
-		int cube = Printable.cube(10);
-		System.out.println(cube);
+		Employee employee1 = new Employee();
+		employee1.setEmpNo(1);
+		employee1.setName("Bhuvan");
+		employee1.setSalary(100000);
+
+		Employee employee2 = new Employee("Karthik", 2, 150000);
+		employee2.setSalary(125000);
+
+		System.out.println(
+				"name :" + employee1.getName() + "  ID :" + employee1.getEmpNo() + " salary :" + employee1.getSalary());
+		System.out.println(
+				"name :" + employee2.getName() + " ID :" + employee2.getEmpNo() + " salary :" + employee2.getSalary());
 	}
 
 }
